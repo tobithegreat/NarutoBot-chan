@@ -14,4 +14,4 @@ bot.on('message', (message) => {
   }
 });
 
-bot.login('NTE4NDY0MTEyNTgyMzI4MzIx.DuRJew.V_q6SGyKMEXedmCjTSkutMEUyI0')
+bot.login('DONT_HACK_ME_KEY')
