@@ -8,4 +8,4 @@ bot.on('message', (message) => {
   }
 });
 
-bot.login('NTE4MzE0OTU0NjA5MTMxNTIw.DuO_QQ.MN2ygkcWmnjt7efixtEbBZP6KCE')
+bot.login('')
