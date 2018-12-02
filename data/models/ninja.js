@@ -8,6 +8,7 @@ const ninjaSchema = mongoose.Schema({
   ninjaID: String,
   ninjaRank: String,
   time: String,
+  exp: int,
 })
 
 module.exports = mongoose.model("Ninja", ninjaSchema)
