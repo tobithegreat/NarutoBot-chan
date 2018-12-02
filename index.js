@@ -1,9 +1,10 @@
 const commando = require('discord.js-commando')
 const bot = new commando.Client()
+const config = require('./config/config.json')
 
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb+srv://Tulyne33:Omega100@narutochanbotcluster-7aqhq.mongodb.net/test?retryWrites=true', { useNewUrlParser: true })
+mongoose.connect(config.db, { useNewUrlParser: true })
 
 bot.registry.registerGroup('status', 'Status')
 bot.registry.registerGroup('ninja', 'Ninja')
@@ -27,4 +28,4 @@ bot.on('message', (message) => {
   }
 });
 
-bot.login('DONT_HACK_PLEASE')
+bot.login(config.token)
