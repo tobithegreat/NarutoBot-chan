@@ -14,15 +14,17 @@ class ShowNinjasCommand extends commando.Command {
 
   async run(message, args) {
     Ninja.find({}, function (err, ninjas) {
-      if (!err) {
-        ninjas.map(ninja => {
-          let ninjaName = ninja['ninjaName']
-          let clanName = ninja['clanName']
-          let ninjaRank = ninja['ninjaRank']
+        if (!err) {
+            ninjas.map(ninja => {
+                let ninjaName = ninja['ninjaName']
+                let clanName = ninja['clanName']
+                let ninjaRank = ninja['ninjaRank']
 
-          message.reply('Name: ' + ninjaName + '\nClan: ' + clanName + '\nShinobi Rank: ' + ninjaRank + '\n\n\n')
-        })
-      }
+                message.channel.send('Name: ' + ninjaName + '\nClan: ' + clanName + '\nShinobi Rank: ' + ninjaRank + '\n-------------------\n')
+            })
+        } else {
+            message.channel.send("Nah fam, the ninjas hidden in the yushes.")
+        }
 
     })
   }
